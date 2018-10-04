@@ -2,8 +2,3 @@
     font-weight: bold;
     background: #cbdaf2;
 }
-
-.k-grid-content td:nth-child(5):hover {
-    font-weight: 400;
-    background: #fff;
-}
