@@ -13,7 +13,8 @@ export class AppComponent {
    title = 'Hello World!';
    public response: any;
    public gridView: GridDataResult;
-  // public response: GridDataResult;
+   public checked: boolean = true;
+   public hide: number = 0;
    public pageSize = 10;
    public skip = 0;
    private data: Object[];
@@ -29,6 +30,22 @@ export class AppComponent {
    constructor(private http: HttpClient){ }
 
    ngOnInit() {}
+
+   onChange(){
+         switch(this.hide){
+            case 0:{
+              this.hide=-1;
+              break;
+            }
+
+            case -1:{
+              this.hide=0;
+              break;
+            }
+         }    
+   }
+
+
 
    show(){     
     let obs=this.http.get('https://jsonplaceholder.typicode.com/todos/');
