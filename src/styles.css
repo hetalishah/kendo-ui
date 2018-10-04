@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+.k-grid-content td:hover {
+    font-weight: bold;
+    background: #cbdaf2;
+}
+
+.k-grid-content td:nth-child(5):hover {
+    font-weight: 400;
+    background: #fff;
+}

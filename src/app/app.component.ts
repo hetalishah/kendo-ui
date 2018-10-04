@@ -3,14 +3,14 @@ import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
-//import { Http, Response } from '@angular/http';
+
 @Component({
    selector: 'app-root',
    templateUrl: './app.component.html',
    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-   title = 'Hello World!';
+   title = 'Kendo UI';
    public response: any;
    public gridView: GridDataResult;
    public checked: boolean = true;
@@ -53,7 +53,6 @@ export class AppComponent {
     this.response= response;
     this.loadItems();
     this.loadProducts();
-    console.log(this.response);
     }
     )}
 
@@ -70,8 +69,6 @@ private loadItems(): void {
         data: this.response.slice(this.skip, this.skip + this.pageSize),
         total: this.response.length
     };
-
-    console.log(this.gridView);
 }
 
 
@@ -87,3 +84,4 @@ private loadProducts(): void {
   };
 
 }
+
